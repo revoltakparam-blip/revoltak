@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Revoltak Solutions — Where Talent Meets Opportunity</title>
+<meta name="description" content="Revoltak Solutions empowers OPT, STEM, H1B, GC & USC professionals with dedicated recruiters, ATS-tuned resumes, and daily interviews — until the offer letter lands." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  /* ---------- RESET ---------- */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  /* ---------- TOKENS: Navy + Cream + Gold ---------- */
+  :root {
+    --cream: #f5efe4;
+    --cream-2: #ece3d0;
+    --navy: #0c1e40;
+    --navy-2: #142a54;
+    --navy-3: #1c356a;
+    --gold: #c9a961;
+    --gold-soft: #d9bd7a;
+    --gold-deep: #a88a45;
+    --muted: #6f6a60;
+    --muted-on-navy: rgba(245, 239, 228, 0.65);
+    --rule: rgba(12, 30, 64, 0.14);
+    --rule-on-navy: rgba(201, 169, 97, 0.22);
+    --max: 1280px;
+    --pad: clamp(20px, 4vw, 56px);
+  }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold-deep);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px; height: 1px; background: var(--gold);
+  }
+  .eyebrow-on-navy { color: var(--gold); }
+  .eyebrow-on-navy::before { background: var(--gold); }
+
+  /* ---------- BUTTONS ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 26px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    transition: transform .25s ease, background .25s ease, color .25s ease, box-shadow .3s ease, border-color .3s ease;
+    white-space: nowrap;
+  }
+  .btn .arr { transition: transform .3s ease; }
+  .btn:hover .arr { transform: translateX(5px); }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .btn-gold:hover { background: var(--gold-soft); box-shadow: 0 10px 30px rgba(201,169,97,0.28); }
+  .btn-navy {
+    background: var(--navy);
+    color: var(--cream);
+  }
+  .btn-navy:hover { background: var(--navy-2); }
+  .btn-ghost {
+    border: 1px solid var(--navy);
+    color: var(--navy);
+  }
+  .btn-ghost:hover { background: var(--navy); color: var(--cream); }
+  .btn-ghost-gold {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+  }
+  .btn-ghost-gold:hover { background: var(--gold); color: var(--navy); }
+
+  /* ---------- LOGO MARK ---------- */
+  .logo {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 100, "opsz" 144, "wght" 700;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: var(--navy);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .logo-mark {
+    width: 42px; height: 42px;
+    border-radius: 8px;
+    background: var(--navy);
+    color: var(--gold);
+    display: grid; place-items: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 24px;
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "wght" 700;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .logo-mark::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(201,169,97,0.3);
+    border-radius: 5px;
+  }
+  .logo-text { display: flex; flex-direction: column; gap: 2px; }
+  .logo-text .sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .logo-on-navy { color: var(--cream); }
+  .logo-on-navy .logo-mark { background: var(--cream); color: var(--navy); }
+  .logo-on-navy .logo-mark::after { border-color: rgba(12,30,64,0.2); }
+  .logo-on-navy .sub { color: var(--gold); }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245, 239, 228, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 80px;
+  }
+  .nav-links {
+    display: flex; gap: 34px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav-links a {
+    position: relative;
+    color: var(--navy);
+    transition: color .2s ease;
+  }
+  .nav-links a::after {
+    content: ""; position: absolute; left: 0; bottom: -6px;
+    height: 1px; width: 0; background: var(--gold);
+    transition: width .3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { display: flex; gap: 12px; align-items: center; }
+
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+    .nav-cta .btn { padding: 12px 18px; font-size: 11px; }
+    .logo-text .sub { display: none; }
+  }
+
+  /* ---------- HERO (NAVY) ---------- */
+  .hero {
+    position: relative;
+    background: var(--navy);
+    color: var(--cream);
+    padding: clamp(60px, 9vw, 110px) 0 clamp(70px, 10vw, 120px);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 8%; right: -220px;
+    width: 620px; height: 620px;
+    border: 1px solid rgba(201, 169, 97, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 14%; right: -160px;
+    width: 440px; height: 440px;
+    border: 1px solid rgba(201, 169, 97, 0.07);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-inner { position: relative; z-index: 1; }
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: clamp(60px, 9vw, 120px);
+    flex-wrap: wrap;
+  }
+  .hero-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .hero-headline {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 40, "opsz" 144, "wght" 500;
+    font-size: clamp(54px, 9.5vw, 148px);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
+    color: var(--cream);
+  }
+  .hero-headline .italic {
+    display: inline-block;
+    font-style: italic;
+    color: var(--gold);
+    font-variation-settings: "SOFT" 100, "opsz" 144, "wght" 400;
+  }
+
+  .hero-desc {
+    margin-top: 36px;
+    font-size: clamp(16px, 1.35vw, 19px);
+    line-height: 1.6;
+    color: rgba(245, 239, 228, 0.82);
+    max-width: 56ch;
+  }
+  .hero-desc strong { color: var(--cream); font-weight: 600; }
+
+  .hero-pills {
+    margin-top: 40px;
+    display: flex; flex-wrap: wrap; gap: 12px;
+  }
+  .hero-pills .pill {
+    padding: 11px 22px;
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    transition: background .25s ease, color .25s ease;
+  }
+  .hero-pills .pill:hover { background: var(--gold); color: var(--navy); }
+
+  .hero-bottom {
+    margin-top: clamp(60px, 10vw, 120px);
+    padding-top: 32px;
+    border-top: 1px solid rgba(201, 169, 97, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-bottom-info {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 60, "wght" 500;
+    color: var(--cream);
+    text-align: right;
+  }
+  .hero-bottom-info .brand {
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+  .hero-bottom-info .tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-top: 6px;
+    font-weight: 400;
+  }
+  .hero-bottom-info .contact {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--muted-on-navy);
+    margin-top: 6px;
+    font-weight: 400;
+  }
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
+  .section-head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .section-tag-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 64px;
+    align-items: end;
+  }
+  @media (min-width: 900px) {
+    .section-head { grid-template-columns: 1.3fr 1fr; }
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 40, "opsz" 144, "wght" 500;
+    font-size: clamp(40px, 5.6vw, 80px);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+  }
+  .section-title .italic {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144, "wght" 400;
+    color: var(--gold-deep);
+  }
+  .section-desc {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.65;
+    max-width: 46ch;
+    text-align: right;
+    justify-self: end;
+  }
+  @media (max-width: 900px) {
+    .section-desc { text-align: left; justify-self: start; }
+  }
+
+  /* ---------- SERVICES ---------- */
+  #services {
+    background: var(--cream);
+    border-top: 1px solid var(--rule);
+  }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 720px) { .svc-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+  @media (min-width: 1080px) { .svc-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+
+  .svc {
+    position: relative;
+    padding: 32px 30px 34px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    overflow: hidden;
+  }
+  .svc:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px -20px rgba(12, 30, 64, 0.2);
+    border-color: var(--gold);
+  }
+
+  .svc-head {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 48px;
+  }
+  .svc .ico {
+    width: 44px; height: 44px;
+    border-radius: 6px;
+    background: var(--navy);
+    color: var(--gold);
+    display: grid; place-items: center;
+  }
+  .svc .ico svg { width: 22px; height: 22px; }
+  .svc .num {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 100, "wght" 400;
+    font-style: italic;
+    font-size: 52px;
+    line-height: 1;
+    color: var(--cream-2);
+  }
+  .svc h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .svc p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ---------- ROADMAP (NAVY CARD) ---------- */
+  #journey {
+    background: var(--cream);
+    padding-top: 0;
+  }
+  .roadmap {
+    background: var(--navy);
+    color: var(--cream);
+    border-radius: 16px;
+    padding: clamp(44px, 6vw, 72px) clamp(32px, 5vw, 56px);
+    position: relative;
+    overflow: hidden;
+  }
+  .roadmap::before {
+    content: "";
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 320px; height: 320px;
+    border: 1px solid rgba(201, 169, 97, 0.14);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .roadmap::after {
+    content: "";
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 240px; height: 240px;
+    border: 1px solid rgba(201, 169, 97, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .roadmap-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+    position: relative; z-index: 1;
+  }
+  .roadmap-title {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 40, "opsz" 144, "wght" 500;
+    font-size: clamp(32px, 4vw, 56px);
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    color: var(--cream);
+    max-width: 16ch;
+  }
+  .roadmap-title .italic {
+    font-style: italic;
+    color: var(--gold);
+    font-variation-settings: "SOFT" 100, "wght" 400;
+  }
+  .roadmap-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .roadmap-rail {
+    position: relative;
+  }
+  .roadmap-rail::before {
+    content: "";
+    position: absolute;
+    top: 28px; left: 28px; right: 28px;
+    height: 1px;
+    background: rgba(201, 169, 97, 0.3);
+  }
+  .roadmap-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    position: relative;
+  }
+  @media (min-width: 700px) { .roadmap-steps { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1000px) { .roadmap-steps { grid-template-columns: repeat(6, 1fr); } }
+
+  .rstep {
+    text-align: center;
+    position: relative;
+  }
+  .rstep .circle {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 2px solid var(--gold);
+    display: grid; place-items: center;
+    margin: 0 auto 20px;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 60, "wght" 600;
+    font-size: 20px;
+    color: var(--gold);
+    position: relative; z-index: 1;
+    transition: all .3s ease;
+  }
+  .rstep.active .circle {
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 0 0 6px rgba(201,169,97,0.15);
+  }
+  .rstep:hover .circle {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .rstep h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .rstep p {
+    font-size: 11px;
+    color: var(--muted-on-navy);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- PRICING ---------- */
+  #pricing { background: var(--cream); }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+  @media (min-width: 720px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) {
+    .pricing-grid {
+      grid-template-columns: 1fr 1.06fr 1fr;
+      gap: 0;
+      padding-top: 30px; /* room for scale lift */
+    }
+  }
+
+  .plan {
+    position: relative;
+    padding: 44px 32px 36px;
+    background: #fff;
+    border: 1px solid var(--navy);
+    border-radius: 10px;
+    display: flex; flex-direction: column;
+  }
+  @media (min-width: 1000px) {
+    .plan-basic { border-radius: 10px 0 0 10px; border-right: none; }
+    .plan-elite { border-radius: 0 10px 10px 0; border-left: none; }
+    .plan-pro {
+      transform: translateY(-24px);
+      z-index: 2;
+      margin-bottom: -24px;
+      padding-bottom: 52px;
+    }
+  }
+
+  .plan-pro {
+    background: var(--navy);
+    color: var(--cream);
+    border: 1px solid var(--navy);
+    box-shadow: 0 30px 60px -20px rgba(12, 30, 64, 0.35);
+  }
+  .plan-pro::before {
+    content: "";
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 240px; height: 240px;
+    border: 1px solid rgba(201, 169, 97, 0.18);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .plan-badge {
+    position: absolute;
+    top: -16px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 8px 24px -8px rgba(201,169,97,0.6);
+  }
+
+  .plan-name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 100, "wght" 600;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+    color: var(--navy);
+  }
+  .plan-pro .plan-name { color: var(--gold); }
+  .plan-elite .plan-name { color: var(--navy); }
+
+  .plan-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+    max-width: 32ch;
+    margin-bottom: 28px;
+  }
+  .plan-pro .plan-desc { color: rgba(245, 239, 228, 0.7); }
+
+  .plan-pricing {
+    display: flex; flex-direction: column;
+    gap: 14px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 28px;
+  }
+  .plan-pro .plan-pricing { border-bottom-color: rgba(201, 169, 97, 0.2); }
+  .plan-price-row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  }
+  .plan-price-row .period {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .plan-pro .plan-price-row .period { color: var(--muted-on-navy); }
+  .plan-price-row .amt {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 60, "wght" 600;
+    font-size: 40px;
+    letter-spacing: -0.035em;
+    color: var(--navy);
+    line-height: 1;
+    display: inline-flex; align-items: baseline; gap: 6px;
+  }
+  .plan-pro .plan-price-row .amt { color: var(--gold); }
+  .plan-price-row .amt .pct {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+  }
+  .plan-pro .plan-price-row .amt .pct { color: var(--muted-on-navy); }
+
+  .plan ul {
+    list-style: none;
+    display: flex; flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .plan li {
+    display: flex; gap: 12px; align-items: flex-start;
+    line-height: 1.45;
+  }
+  .plan li em { font-style: normal; opacity: 0.7; font-size: 13px; }
+  .plan li .tick {
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    display: grid; place-items: center;
+    font-size: 10px; font-weight: 700;
+    margin-top: 1px;
+  }
+  .plan-basic li .tick,
+  .plan-elite li .tick { border-color: var(--navy); color: var(--navy); }
+  .plan li.off {
+    color: var(--muted);
+    opacity: 0.55;
+  }
+  .plan li.off .tick {
+    border-color: var(--muted);
+    color: transparent;
+    position: relative;
+  }
+  .plan li.off .tick::after {
+    content: "";
+    position: absolute;
+    width: 10px; height: 1.5px;
+    background: var(--muted);
+    transform: rotate(-45deg);
+  }
+
+  .plan-foot {
+    margin-top: auto;
+    padding-top: 32px;
+  }
+
+  /* ---------- ADD-ONS ---------- */
+  #addons { background: var(--cream); padding-top: clamp(60px, 7vw, 100px); }
+  .addons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 560px) { .addons-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px) { .addons-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1100px) { .addons-grid { grid-template-columns: repeat(5, 1fr); } }
+
+  .addon {
+    padding: 32px 26px 28px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    transition: transform .35s ease, border-color .35s ease, box-shadow .3s ease;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .addon:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px -20px rgba(12, 30, 64, 0.2);
+  }
+  .addon .ico {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
+    display: grid; place-items: center;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 100, "wght" 600;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .addon h5 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .addon p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .addon .price-tag {
+    padding-top: 16px;
+    border-top: 1px dashed var(--rule);
+  }
+  .addon .price-tag strong {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 60, "wght" 600;
+    font-size: 24px;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .addon .price-tag span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* ---------- BUNDLE ---------- */
+  #bundle {
+    background: var(--cream);
+    padding-top: clamp(60px, 7vw, 100px);
+    padding-bottom: clamp(70px, 9vw, 120px);
+  }
+  .bundle-card {
+    background: var(--navy);
+    color: var(--cream);
+    border-radius: 16px;
+    padding: clamp(36px, 5vw, 60px) clamp(32px, 5vw, 56px);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  @media (min-width: 800px) {
+    .bundle-card { grid-template-columns: 80px 1fr auto; gap: 36px; }
+  }
+  .bundle-card::before {
+    content: "";
+    position: absolute;
+    top: -100px; right: -80px;
+    width: 280px; height: 280px;
+    border: 1px solid rgba(201, 169, 97, 0.15);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .bundle-card::after {
+    content: "";
+    position: absolute;
+    top: -60px; right: -40px;
+    width: 200px; height: 200px;
+    border: 1px solid rgba(201, 169, 97, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .bundle-icon {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy);
+    display: grid; place-items: center;
+    font-size: 34px;
+    position: relative; z-index: 1;
+  }
+  .bundle-text { position: relative; z-index: 1; }
+  .bundle-text .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .bundle-text .name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 60, "opsz" 144, "wght" 500;
+    font-size: clamp(28px, 3.4vw, 42px);
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    margin-bottom: 8px;
+  }
+  .bundle-text .name .italic {
+    font-style: italic;
+    color: var(--gold);
+    font-variation-settings: "SOFT" 100, "wght" 400;
+  }
+  .bundle-text .meta {
+    font-size: 14px;
+    color: rgba(245, 239, 228, 0.75);
+    line-height: 1.5;
+  }
+  .bundle-price {
+    text-align: right;
+    position: relative; z-index: 1;
+  }
+  .bundle-price .amt {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 60, "wght" 600;
+    font-size: clamp(48px, 6vw, 72px);
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+  .bundle-price .save {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(245, 239, 228, 0.7);
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  /* ---------- WHY US ---------- */
+  #why { background: var(--cream-2); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    background: var(--navy);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  @media (min-width: 800px) { .why-grid { grid-template-columns: repeat(3, 1fr); } }
+  .why-card {
+    background: var(--cream);
+    padding: 44px 36px;
+    position: relative;
+    border-top: 4px solid var(--gold);
+  }
+  .why-card h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .why-card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ---------- QUOTE ---------- */
+  .quote-wrap {
+    padding: clamp(70px, 9vw, 130px) 0;
+    text-align: center;
+    background: var(--cream);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .quote-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 120px;
+    line-height: 0.5;
+    color: var(--gold);
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "wght" 400;
+  }
+  .quote-text {
+    margin-top: 24px;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 60, "opsz" 144, "wght" 400;
+    font-size: clamp(26px, 4vw, 52px);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    max-width: 22ch;
+    margin-left: auto; margin-right: auto;
+    color: var(--navy);
+  }
+  .quote-text .italic { font-style: italic; color: var(--gold-deep); font-variation-settings: "SOFT" 100, "wght" 300; }
+  .quote-cite {
+    margin-top: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- CTA (NAVY) ---------- */
+  #cta {
+    background: var(--navy);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  #cta::before {
+    content: "";
+    position: absolute;
+    bottom: -180px; left: -100px;
+    width: 420px; height: 420px;
+    border: 1px solid rgba(201, 169, 97, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta-inner {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (min-width: 900px) { .cta-inner { grid-template-columns: 1.3fr 1fr; gap: 64px; } }
+
+  .cta-title {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 40, "opsz" 144, "wght" 500;
+    font-size: clamp(48px, 7vw, 104px);
+    line-height: 0.94;
+    letter-spacing: -0.03em;
+    margin-top: 20px;
+    color: var(--cream);
+  }
+  .cta-title .italic {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144, "wght" 400;
+    color: var(--gold);
+  }
+  .cta-desc {
+    margin-top: 28px;
+    max-width: 48ch;
+    color: rgba(245, 239, 228, 0.7);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .cta-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .contact-card {
+    background: rgba(245, 239, 228, 0.04);
+    border: 1px solid rgba(201, 169, 97, 0.22);
+    border-radius: 10px;
+    padding: 30px 28px;
+  }
+  .contact-item {
+    display: flex; flex-direction: column;
+    gap: 6px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.14);
+  }
+  .contact-item:first-child { padding-top: 4px; }
+  .contact-item:last-child { border-bottom: none; padding-bottom: 4px; }
+  .contact-item .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .contact-item .val {
+    font-size: 15px;
+    color: var(--cream);
+    line-height: 1.4;
+  }
+  .contact-item a.val:hover { color: var(--gold); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 48px 0 28px;
+    border-top: 1px solid rgba(201, 169, 97, 0.16);
+  }
+  .foot-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.14);
+  }
+  @media (min-width: 800px) {
+    .foot-top { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+  }
+  .foot-brand p {
+    margin-top: 20px;
+    color: rgba(245, 239, 228, 0.65);
+    font-size: 14px;
+    max-width: 38ch;
+    line-height: 1.65;
+  }
+  .foot-col h6 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+  .foot-col a, .foot-col li { color: rgba(245, 239, 228, 0.75); transition: color .2s ease; }
+  .foot-col a:hover { color: var(--gold); }
+
+  .foot-bottom {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: rgba(245, 239, 228, 0.5);
+    text-transform: uppercase;
+  }
+
+  /* ---------- REVEAL ANIMATION ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .9s cubic-bezier(0.22, 1, 0.36, 1), transform .9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+  .reveal.d5 { transition-delay: 0.40s; }
+
+  /* Keep pro card's transform on desktop */
+  @media (min-width: 1000px) {
+    .plan-pro.reveal.in { transform: translateY(-24px); }
+    .plan-pro.reveal { transform: translateY(4px); }
+  }
+
+  /* Grain overlay for depth */
+  .grain {
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.03;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============== NAV ============== -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">R</span>
+      <span class="logo-text">Revoltak<span class="sub">SOLUTIONS</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#journey">Roadmap</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#addons">Add-ons</a>
+      <a href="#cta">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#cta" class="btn btn-navy">Get Started <span class="arr">→</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero">
+  <div class="wrap hero-inner">
+
+    <div class="hero-top">
+      <a href="#" class="logo logo-on-navy">
+        <span class="logo-mark">R</span>
+        <span class="logo-text">Revoltak<span class="sub">SOLUTIONS</span></span>
+      </a>
+      <div class="hero-tag">Career Guide · 2026</div>
+    </div>
+
+    <div class="reveal in">
+      <span class="eyebrow eyebrow-on-navy">US Career Acceleration</span>
+      <h1 class="hero-headline" style="margin-top: 32px;">
+        Your Dream<br>
+        Job in the<br>
+        <span class="italic">US Market.</span>
+      </h1>
+    </div>
+
+    <div class="reveal in d2">
+      <p class="hero-desc">
+        Empowering <strong>OPT, STEM, H1B, GC &amp; USC</strong> professionals with dedicated recruiters, ATS-tuned resumes, and daily interviews — until the offer letter lands.
+      </p>
+
+      <div class="hero-pills">
+        <span class="pill">100% Dedicated Support</span>
+        <span class="pill">ATS Optimized</span>
+        <span class="pill">Daily Interviews</span>
+        <span class="pill">Registered US Company</span>
+      </div>
+    </div>
+
+    <div class="hero-bottom reveal in d3">
+      <a href="#pricing" class="btn btn-gold">Get Started Today <span class="arr">→</span></a>
+      <div class="hero-bottom-info">
+        <div class="brand">Revoltak Solutions</div>
+        <div class="tagline">Where Talent Meets Opportunity</div>
+        <div class="contact">www.revoltak.com · info@revoltak.com</div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ============== SERVICES ============== -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head-row">
+      <span class="eyebrow">End-to-End Services</span>
+      <span class="section-tag-right">02 — What We Do</span>
+    </div>
+    <div class="section-head">
+      <h2 class="section-title reveal">Everything you need<br><span class="italic">to land the offer.</span></h2>
+      <p class="section-desc reveal d1">
+        Every engagement runs the full arc — from the first line of your resume to the moment an offer letter lands in your inbox. Not templates. Not hope. The playbook.
+      </p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="svc-head">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+          </div>
+          <div class="num">01</div>
+        </div>
+        <h3>Resume Crafting</h3>
+        <p>Tailored US-market resumes built to pass ATS filters and attract top-tier employers from day one.</p>
+      </article>
+
+      <article class="svc reveal d1">
+        <div class="svc-head">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="num">02</div>
+        </div>
+        <h3>Profile Enhancement</h3>
+        <p>Complete LinkedIn &amp; professional profile makeover fully aligned to what US recruiters actually look for.</p>
+      </article>
+
+      <article class="svc reveal d2">
+        <div class="svc-head">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </div>
+          <div class="num">03</div>
+        </div>
+        <h3>Profile Marketing</h3>
+        <p>Your dedicated recruiter actively markets your profile and secures interviews for you every single day.</p>
+      </article>
+
+      <article class="svc reveal d3">
+        <div class="svc-head">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="num">04</div>
+        </div>
+        <h3>Employment Verification</h3>
+        <p>Expert guidance through employment documentation — protecting your US job offer every step of the way.</p>
+      </article>
+
+      <article class="svc reveal d4">
+        <div class="svc-head">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="num">05</div>
+        </div>
+        <h3>ATS Optimization</h3>
+        <p>Keyword-rich resume tuning to pass automated screening at top US employers — before a human even sees it.</p>
+      </article>
+
+      <article class="svc reveal d5">
+        <div class="svc-head">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="num">06</div>
+        </div>
+        <h3>Extra Services</h3>
+        <p>Mock interviews, live support, GitHub portfolio, resume coaching &amp; more — available as power-up add-ons.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ROADMAP ============== -->
+<section id="journey">
+  <div class="wrap">
+    <div class="roadmap">
+      <div class="roadmap-head">
+        <h2 class="roadmap-title">Your <span class="italic">6-Step</span> Path<br>to an Offer Letter</h2>
+        <span class="roadmap-label">— Milestone Roadmap</span>
+      </div>
+
+      <div class="roadmap-rail">
+        <div class="roadmap-steps">
+          <div class="rstep active reveal"><div class="circle">1</div><h4>Resume Built</h4><p>ATS-optimized</p></div>
+          <div class="rstep reveal d1"><div class="circle">2</div><h4>Profile Live</h4><p>Enhancement done</p></div>
+          <div class="rstep reveal d2"><div class="circle">3</div><h4>Marketing</h4><p>Outreach begins</p></div>
+          <div class="rstep reveal d3"><div class="circle">4</div><h4>Interviews</h4><p>Secured daily</p></div>
+          <div class="rstep reveal d4"><div class="circle">5</div><h4>Verification</h4><p>Docs compliant</p></div>
+          <div class="rstep reveal d5"><div class="circle">6</div><h4>Offer Letter</h4><p>Dream job awaits</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRICING ============== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head-row">
+      <span class="eyebrow">Pricing Plans</span>
+      <span class="section-tag-right">03 — Service Packages</span>
+    </div>
+    <div class="section-head">
+      <h2 class="section-title reveal">Pick your <span class="italic">path</span><br>to success.</h2>
+      <p class="section-desc reveal d1">
+        All plans include a <strong style="color: var(--navy);">+5% success fee</strong>. PRO is our recommended plan — chosen by 80% of clients. Upgrade anytime.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- BASIC -->
+      <div class="plan plan-basic reveal">
+        <div class="plan-name">BASIC</div>
+        <p class="plan-desc">Entry-level access to get your career search started in the US market.</p>
+
+        <div class="plan-pricing">
+          <div class="plan-price-row">
+            <span class="period">3 Months</span>
+            <span class="amt">$299<span class="pct">+5%</span></span>
+          </div>
+          <div class="plan-price-row">
+            <span class="period">6 Months</span>
+            <span class="amt">$499<span class="pct">+5%</span></span>
+          </div>
+        </div>
+
+        <ul>
+          <li><span class="tick">✓</span>ATS-Optimized Resume</li>
+          <li><span class="tick">✓</span>Basic Profile Setup</li>
+          <li><span class="tick">✓</span>Standard Profile Marketing</li>
+          <li><span class="tick">✓</span>Email Support</li>
+          <li class="off"><span class="tick"></span>No LinkedIn Optimization</li>
+          <li class="off"><span class="tick"></span>No Interview Prep</li>
+          <li class="off"><span class="tick"></span>No Priority Manager</li>
+        </ul>
+
+        <div class="plan-foot">
+          <a href="#cta" class="btn btn-ghost" style="width: 100%; justify-content: center;">Get Started <span class="arr">→</span></a>
+        </div>
+      </div>
+
+      <!-- PRO (FEATURED) -->
+      <div class="plan plan-pro reveal d1">
+        <span class="plan-badge">★ Most Popular</span>
+        <div class="plan-name">PRO</div>
+        <p class="plan-desc">Our main money plan — the one that gets you hired fastest in the US.</p>
+
+        <div class="plan-pricing">
+          <div class="plan-price-row">
+            <span class="period">3 Months</span>
+            <span class="amt">$499<span class="pct">+5%</span></span>
+          </div>
+          <div class="plan-price-row">
+            <span class="period">6 Months</span>
+            <span class="amt">$799<span class="pct">+5%</span></span>
+          </div>
+        </div>
+
+        <ul>
+          <li><span class="tick">✓</span>Premium Resume <em>(Recruiter-Grade)</em></li>
+          <li><span class="tick">✓</span>Get noticed by US recruiters faster</li>
+          <li><span class="tick">✓</span>Priority Profile Marketing</li>
+          <li><span class="tick">✓</span>Basic Interview Prep Included</li>
+          <li><span class="tick">✓</span>Faster Response Support</li>
+          <li><span class="tick">✓</span>Progress Check-ins</li>
+          <li><span class="tick">✓</span>Everything in Basic</li>
+        </ul>
+
+        <div class="plan-foot">
+          <a href="#cta" class="btn btn-gold" style="width: 100%; justify-content: center;">Choose Pro <span class="arr">→</span></a>
+        </div>
+      </div>
+
+      <!-- ELITE -->
+      <div class="plan plan-elite reveal d2">
+        <div class="plan-name">ELITE</div>
+        <p class="plan-desc">For driven professionals who want aggressive placement with full support.</p>
+
+        <div class="plan-pricing">
+          <div class="plan-price-row">
+            <span class="period">3 Months</span>
+            <span class="amt">$799<span class="pct">+5%</span></span>
+          </div>
+          <div class="plan-price-row">
+            <span class="period">6 Months</span>
+            <span class="amt">$1,199<span class="pct">+5%</span></span>
+          </div>
+        </div>
+
+        <ul>
+          <li><span class="tick">✓</span>Everything in Pro</li>
+          <li><span class="tick">✓</span>Dedicated Account Manager</li>
+          <li><span class="tick">✓</span>Aggressive Profile Marketing</li>
+          <li><span class="tick">✓</span>2 Mock Interview Sessions</li>
+          <li><span class="tick">✓</span>Live Interview Assistance</li>
+          <li><span class="tick">✓</span>Priority Placement Strategy</li>
+          <li><span class="tick">✓</span>Quarterly Progress Reviews</li>
+        </ul>
+
+        <div class="plan-foot">
+          <a href="#cta" class="btn btn-ghost" style="width: 100%; justify-content: center;">Go Elite <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ADD-ONS ============== -->
+<section id="addons">
+  <div class="wrap">
+    <div class="section-head-row">
+      <span class="eyebrow">Power-up Add-ons</span>
+      <span class="section-tag-right">04 — Extras</span>
+    </div>
+    <div class="section-head">
+      <h2 class="section-title reveal">Supercharge your plan —<br><span class="italic">your profit engine.</span></h2>
+      <p class="section-desc reveal d1">
+        Targeted upgrades for anyone who wants an extra edge. Stack them on any plan, any time — pay only for what you need.
+      </p>
+    </div>
+
+    <div class="addons-grid">
+      <div class="addon reveal">
+        <div class="ico">Li</div>
+        <h5>LinkedIn Full Optimization</h5>
+        <p>Complete overhaul + 3 months Premium included to maximize recruiter visibility.</p>
+        <div class="price-tag">
+          <strong>$99</strong>
+          <span>One-time</span>
+        </div>
+      </div>
+
+      <div class="addon reveal d1">
+        <div class="ico">Mi</div>
+        <h5>Mock Interviews</h5>
+        <p>Targeted practice sessions with industry-specific questions to sharpen your answers.</p>
+        <div class="price-tag">
+          <strong>$79</strong>
+          <span>Per session</span>
+        </div>
+      </div>
+
+      <div class="addon reveal d2">
+        <div class="ico">Ls</div>
+        <h5>Live Interview Support</h5>
+        <p>Our experts join your interviews in real-time to coach you through every question.</p>
+        <div class="price-tag">
+          <strong>$149</strong>
+          <span>Per interview</span>
+        </div>
+      </div>
+
+      <div class="addon reveal d3">
+        <div class="ico">Rv</div>
+        <h5>Resume Deep-Dive</h5>
+        <p>1:1 coaching session to walk interviewers through your CV with full confidence.</p>
+        <div class="price-tag">
+          <strong>$59</strong>
+          <span>One-time</span>
+        </div>
+      </div>
+
+      <div class="addon reveal d4">
+        <div class="ico">Gh</div>
+        <h5>GitHub Portfolio</h5>
+        <p>Pro GitHub with curated real-world projects that impress technical hiring managers.</p>
+        <div class="price-tag">
+          <strong>$129</strong>
+          <span>One-time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BUNDLE ============== -->
+<section id="bundle">
+  <div class="wrap">
+    <div class="bundle-card reveal">
+      <div class="bundle-icon">🎯</div>
+      <div class="bundle-text">
+        <div class="label">★ Best Value Bundle</div>
+        <div class="name">Interview <span class="italic">Success Pack</span></div>
+        <div class="meta">Mock Interview + Live Support + Resume Deep-Dive — all in one.</div>
+      </div>
+      <div class="bundle-price">
+        <div class="amt">$249</div>
+        <div class="save">Save $38</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHY US ============== -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head-row">
+      <span class="eyebrow">Why Clients Trust Us</span>
+      <span class="section-tag-right">05 — Trust</span>
+    </div>
+    <div class="section-head">
+      <h2 class="section-title reveal">A partner that <span class="italic">actually</span><br>shows up.</h2>
+      <p class="section-desc reveal d1">
+        We don't sell courses or templates. We run a real US career acceleration operation — focused on one thing: getting you employed.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <h4>OPT, GC, H1B Specialists</h4>
+        <p>F-1 OPT/STEM, USC, Green Card &amp; H1B holders are our specialty — we know your unique challenges inside out.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <h4>Deep US Market Focus</h4>
+        <p>Deep, current knowledge of US employer expectations, recruiter workflows, and the ATS systems that decide who gets an interview.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <h4>Registered US Company</h4>
+        <p>A real, registered US company at 1309 Coffeen Ave, Sheridan, WY — accountable, transparent, here for the long run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== QUOTE ============== -->
+<section style="padding:0;">
+  <div class="wrap">
+    <div class="quote-wrap reveal">
+      <div class="quote-mark">“</div>
+      <p class="quote-text">We don't wish you luck — <span class="italic">we run the playbook.</span></p>
+      <div class="quote-cite">Revoltak Solutions — Sheridan, WY</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA ============== -->
+<section id="cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="reveal">
+        <span class="eyebrow eyebrow-on-navy">Ready when you are</span>
+        <h2 class="cta-title">Ready to land your<br><span class="italic">US job today?</span></h2>
+        <p class="cta-desc">
+          Our team is ready to build your path to an offer letter. Join hundreds of OPT, H1B, and GC professionals who trusted Revoltak to launch their US careers.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:info@revoltak.com" class="btn btn-gold">Contact Us Now <span class="arr">→</span></a>
+          <a href="#pricing" class="btn btn-ghost-gold">View Plans</a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal d1">
+        <div class="contact-item">
+          <span class="lbl">Email</span>
+          <a class="val" href="mailto:info@revoltak.com">info@revoltak.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="lbl">Website</span>
+          <a class="val" href="https://www.revoltak.com">www.revoltak.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="lbl">Address</span>
+          <span class="val">1309 Coffeen Ave, STE 16345<br>Sheridan, WY — USA</span>
+        </div>
+        <div class="contact-item">
+          <span class="lbl">Hours</span>
+          <span class="val">Mon — Fri · 9a — 6p CT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#" class="logo logo-on-navy">
+          <span class="logo-mark">R</span>
+          <span class="logo-text">Revoltak<span class="sub">SOLUTIONS</span></span>
+        </a>
+        <p>A US-registered career acceleration firm championing OPT, STEM, H1B, GC and USC professionals from first resume to signed offer letter.</p>
+      </div>
+      <div class="foot-col">
+        <h6>Explore</h6>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#journey">Roadmap</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#addons">Add-ons</a></li>
+          <li><a href="#bundle">Success Pack</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Contact</h6>
+        <ul>
+          <li><a href="mailto:info@revoltak.com">info@revoltak.com</a></li>
+          <li><a href="https://www.revoltak.com">www.revoltak.com</a></li>
+          <li>Mon — Fri · 9a — 6p CT</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Office</h6>
+        <ul>
+          <li>1309 Coffeen Ave</li>
+          <li>STE 16345</li>
+          <li>Sheridan, WY — USA</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Revoltak Solutions — All rights reserved</span>
+      <span>Where Talent Meets Opportunity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+
+</body>
+</html>
